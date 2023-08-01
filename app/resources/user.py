@@ -33,7 +33,7 @@ class User(Resource):
         # Notice that we are passing in the actual sqlalchemy user object here
         access_token = create_access_token(
             identity=json.dumps(user, cls=AlchemyEncoder))
-        return jsonify(access_token=access_token)
+        return jsonify(username=username, access_token=access_token)
 
     @jwt_required()  # Requires dat token
     def get(self):
