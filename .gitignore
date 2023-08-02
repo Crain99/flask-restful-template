@@ -10,6 +10,7 @@ __pycache__/
 .idea
 .gitignore
 .Python
+venv/
 build/
 develop-eggs/
 dist/
